@@ -1,0 +1,72 @@
+<html>
+    
+    <head>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">    
+    <!--<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    
+        <script>
+        $(document).ready(function(){
+            
+            
+            	  $('#example').DataTable({
+			
+			//"ajax": 'data.json'
+			"scrollY": 500,
+		  
+		    "ajax": {
+				//"url": "data.json",
+				"url": "action.php",
+				"dataSrc": ""
+			},
+                    "columns": [
+				{ "data": "array1.ID" },
+				{ "data": "array1.NAMA" },
+				{ "data": "array1.EMAIL" },
+				{ "data": "array2.EDIT_LINK"},
+				{ "data": "array2.DELETE_LINK"},
+                                
+                           ],
+    		    
+		  });
+
+              
+            });
+        </script>
+    </head>
+
+
+<body>
+<!--<table id="records_table" border='1' align='center'>-->
+<table id="example" border='1' align='center' style="width:70%">
+        <thead>
+        <tr>
+            <th colspan="5">Menggunakan Metode Ajax Call</th>
+            </tr>
+            <tr>
+            <th>ID</th>
+            <th>NAMA</th>
+            <th>EMAIL</th>
+            <th>E</th>
+            <th>D</th>
+        </tr>
+        </thead>
+         <tfoot>
+         <tr>
+            <th>ID</th>
+            <th>NAMA</th>
+            <th>EMAIL</th>
+            <th>E</th>
+            <th>D</th>
+        </tr>
+        </tfoot>
+</table>
+
+
+
+</body>
+
+
+
